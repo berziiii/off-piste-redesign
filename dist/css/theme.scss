@@ -1,9 +1,15 @@
 $blue: #00b6f1;
+$black: #0c0c0c;
+$off-white: #ededed;
 
 body {
   font-family: 'Roboto';
   font-weight: 600;
   font-size: 16pt;
+}
+
+.button-collapse {
+  color: $blue;
 }
 
 .row .col {
@@ -67,13 +73,55 @@ body {
   -webkit-transition: opacity .7s ease-in-out;
 }
 
-.slide-img {
-  width: 25%;
-  background-color: #fff;
+// .work-wrapper {
+//   border: .5 solid $blue;
+// }
+
+.work-container {
+  text-align: center;
+  color: $black;
+  // background-color: $off-white;
+  font-weight: 600;
+  width: 100%;
+  & a > img {
+    width: 105%;
+    // margin: 0px auto;
+    & :hover {
+      border: 1px solid $blue;
+      cursor: pointer;
+    }
+  }
 }
 
-// .slides li img {
-//   width: 50%;
-//   margin: 0px 25%;
-//   background-color: #fff;
+.modal-image {
+  width: 70%;
+  margin: 0px 15%;
+  box-sizing: border-box;
+}
+
+.caption {
+  text-align: left;
+  font-weight: 600;
+  width: 90%;
+  margin: 0 5%;
+  padding: 20px 0px;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+.modal-button {
+  text-align: center;
+  margin-top: 20px;
+  & .waves-light {
+    background-color: $blue;
+  }
+}
+
+// .modal-content {
+//   font-weight: 900;
+//   text-align: center;
+//   & h5 {
+//     width: 75%;
+//     margin-left: 12.5%;
+//   }
 // }

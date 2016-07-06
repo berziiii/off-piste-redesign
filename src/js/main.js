@@ -3,13 +3,13 @@
 var html = '';
 var words = [
   {Title: ' Web Designer.'},
+  {Title: ' Innovator.'},
   {Title: ' Ski Coach.'},
   {Title: ' Longboarder.'},
-  {Title: ' Problem-Solver.'},
+  {Title: ' Technologist.'},
   {Title: ' Baltimorean.'},
   {Title: ' Do-It-Yourselfer.'},
-  {Title: ' Innovator.'},
-  {Title: ' Technologist.'}
+  {Title: ' Problem-Solver.'}
   ];
 
 function rotateWord(word) {
@@ -73,11 +73,8 @@ $('a[href*=#]:not([href=#])').click(function() {
   }
 });
 
+//===========Modal Section============//
 
 $('#tastyr').on('click', function() {
   $('#tastyr-modal').openModal();
-});
-
-$(document).ready(function(){
-  $('.slider').slider({full_width: true});
 });

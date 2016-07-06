@@ -3,6 +3,9 @@ body {
   font-weight: 600;
   font-size: 16pt; }
 
+.button-collapse {
+  color: #00b6f1; }
+
 .row .col {
   padding: 0px 0px; }
 
@@ -55,8 +58,35 @@ body {
   -moz-transition: opacity .7s ease-in-out;
   -webkit-transition: opacity .7s ease-in-out; }
 
-.slide-img {
-  width: 25%;
-  background-color: #fff; }
+.work-container {
+  text-align: center;
+  color: #0c0c0c;
+  font-weight: 600;
+  width: 100%; }
+  .work-container a > img {
+    width: 105%; }
+    .work-container a > img :hover {
+      border: 1px solid #00b6f1;
+      cursor: pointer; }
+
+.modal-image {
+  width: 70%;
+  margin: 0px 15%;
+  box-sizing: border-box; }
+
+.caption {
+  text-align: left;
+  font-weight: 600;
+  width: 90%;
+  margin: 0 5%;
+  padding: 20px 0px;
+  border-top: 1px solid #0c0c0c;
+  border-bottom: 1px solid #0c0c0c; }
+
+.modal-button {
+  text-align: center;
+  margin-top: 20px; }
+  .modal-button .waves-light {
+    background-color: #00b6f1; }
 
 /*# sourceMappingURL=main.css.map */
