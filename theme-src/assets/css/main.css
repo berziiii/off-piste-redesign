@@ -1,0 +1,70 @@
+#hero-container {
+  width: 100%;
+  position: relative;
+}
+
+.header-video {
+  width: 100%;
+  z-index:-100;
+}
+
+.logo-img {
+  width: 50%;
+}
+
+#header-hero {
+  font-size: 60px;
+}
+
+.rotating-container > p {
+  font-size: 45px;
+  line-height: 50px;
+}
+
+.tech-img {
+  width: 75%;
+  margin: 0px 12.5%;
+  padding-bottom: 15px;
+}
+
+.tech-img > img {
+  width: 50%;
+}
+
+.rotating-sentence {
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 5%
+}
+
+.rotating-sentence > h1 {
+  font-size: 50px;
+  line-height: 35px;
+}
+
+.active-word {
+  opacity: 1;
+  position: absolute;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  color: #00b6f1;
+}
+
+.rotating-word {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  color: #00b6f1;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-content > p {
+  font-size: 16pt;
+}
