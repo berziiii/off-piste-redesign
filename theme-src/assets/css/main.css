@@ -68,3 +68,48 @@
 .about-content > p {
   font-size: 16pt;
 }
+
+/* Media Queries */
+@media (max-width: 992px) {
+  header .intro-content {
+    width: 70%;
+  }
+  header .logo-img {
+    width: 30%;
+  }
+  header #header-hero {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  header {
+    padding: 100px 0px 0px;
+  }
+  #hero-container {
+    margin-top: -60px;
+  }
+
+  header .intro-content{
+    position: absolute;
+    width: 70%;
+    margin-left: 15%;
+    top: 25%;
+  }
+
+  .scroll-down, .brand-name-subtext {
+    display: none;
+  }
+
+  .rotating-container > p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  header #header-hero{
+    font-size: 25px;
+  }
+}
