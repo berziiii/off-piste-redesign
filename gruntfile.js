@@ -15,48 +15,53 @@ module.exports = function(grunt) {
         concat: {
             css : {
                 src: [
-                'src/css/main.css'
+                'src/assets/css/main.css',
+                'src/assets/css/vitality-blue.css'
                 ],
-                dest : 'test/css/main-concat.css'
+                dest : 'test/css/main-concat.css',
             },
         },
-        // Prefix the CSS
-        autoprefixer: {
-            options: {
-                browsers: ["last 2 versions", "> 5%", "ie 8", "ie 7"]
-            },
-            your_target: {
-                options: {
-                    flatten: true
-                },
-                src: 'test/css/main-concat.css',
-                dest: 'test/css/main.css'
-            },
-        },
+        // // Prefix the CSS
+        // autoprefixer: {
+        //     options: {
+        //         browsers: ["last 2 versions", "> 5%", "ie 8", "ie 7"]
+        //     },
+        //     your_target: {
+        //         options: {
+        //             flatten: true
+        //         },
+        //         src: [
+        //           'test/css/main-concat.css'
+        //           ],
+        //         dest: [
+        //           'css/main.css',
+        //         ]
+        //     },
+        // },
         // Minify CSS
-        cssmin: {
-            minify: {
-                expand: true,
-                cwd: 'test/css/',
-                src: ['main.css'],
-                dest: 'dist/css/',
-                ext: '.css'
-            },
-        },
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-              options: {                                 // Target options
-                removeComments: true,
-                collapseWhitespace: true
-              },
-              files: {                                   // Dictionary of files
-                'dist/index.html': 'src/index.html', // 'destination': 'source'
-              }
-            }
-        },
+        // cssmin: {
+        //     minify: {
+        //         expand: true,
+        //         cwd: 'src/assets/css/',
+        //         src: ['main.css', 'vitality-blue.css'],
+        //         dest: 'dist/css/',
+        //         ext: '.css'
+        //     },
+        // },
+        // htmlmin: {                                     // Task
+        //     dist: {                                      // Target
+        //       options: {                                 // Target options
+        //         removeComments: true,
+        //         collapseWhitespace: true
+        //       },
+        //       files: {                                   // Dictionary of files
+        //         'dist/index.html': 'src/index.html', // 'destination': 'source'
+        //       }
+        //     }
+        // },
         imageoptim: {
             myTask: {
-                src: 'src/assets/images'
+                src: 'src/assets/img/*'
             }
         },
         sync: {
@@ -64,11 +69,9 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: 'src',
                     src: [
-                        'fonts/**',
-                        'font/**',
                         'assets/**',
-                        'js/**',
-                        'css/**'
+                        // 'js/**',
+                        // 'css/**',
                     ],
                     dest: 'dist'
                     }],
@@ -90,17 +93,17 @@ module.exports = function(grunt) {
                 }
             }
         },
-        //- Sass
-        sass: {
-            options: {
-                sourceMap: true
-            },
-            dist: {
-                files: {
-                    'dist/css/main.css': 'src/css/index.scss'
-                }
-            }
-        },
+        // //- Sass
+        // sass: {
+        //     options: {
+        //         sourceMap: true
+        //     },
+        //     dist: {
+        //         files: {
+        //             'dist/css/main.css': 'src/css/index.scss'
+        //         }
+        //     }
+        // },
         //- Watchers
         watch: {
             grunt: {
@@ -115,7 +118,7 @@ module.exports = function(grunt) {
     });
     //- REGISTER ALL OUR GRUNT TASKS
     grunt.task.run('notify_hooks');
-    grunt.registerTask('default', ['concat', 'autoprefixer', 'cssmin', 'htmlmin', 'sync', 'sass', 'watch']);
+    grunt.registerTask('default', ['concat', 'autoprefixer', 'cssmin', 'htmlmin', 'sync', 'watch']);
     grunt.registerTask('app_change', ['concat:app', 'uglify:app', 'uglify:main']);
     grunt.registerTask('concat_change', ['uglify:app']);
     grunt.registerTask('css_prefixed', ['autoprefixer']);
